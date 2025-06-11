@@ -44,7 +44,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/arshiacomplus/WarpScanner/ma
 
 ✔️**IP扫描（IPv4和IPv6）**  
 ✔️**获取线条配置**  
-✔️**创建一个亚概念链接**  
+✔️**ایجاد لینک سابسکریپشن**  
 ✔️**支持V2RAR和MAHSANG**  
 ✔️**支持Sing-Box和Hiddify**  
 ✔️**将IP保存在CSV文件中**  
@@ -61,14 +61,14 @@ bash <(curl -fsSL https://raw.githubusercontent.com/arshiacomplus/WarpScanner/ma
 ### 🎁**财务帮助**
 
 🔹**TRX：**  
-[TKUpVDG5DqLDUSg3X1hhidRPuhm1GmqZ2G](https://link.trustwallet.com/send?coin=195&address=TKUpVDG5DqLDUSg3X1hhidRPuhm1GmqZ2G)
+[tkupvdg5dqldusg3x1hhidrpuhm1gmqz2g](https://link.trustwallet.com/send?coin=195&address=TKUpVDG5DqLDUSg3X1hhidRPuhm1GmqZ2G)
 
 🔹**USDT：**  
 [0 Busbasi 10，带有雷电。](https://link.trustwallet.com/send?coin=60&address=0xBcE10b8B572DdFAc53855879ebCE9942296553A3&token_id=0xdAC17F958D2ee523a2206206994597C13D831ec7)
 
 ### ⭐**免费支持**
 
-✅**通过给星2和Falou来支持该项目！**  
+✅**با دادن ستاره ⭐ و فالو 💙 از پروژه حمایت کنید!**  
 ✅**向您的朋友介绍！**
 
 <p align="center">
