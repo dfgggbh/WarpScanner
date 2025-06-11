@@ -25,7 +25,7 @@
 
 ⛔**Don't download the thromax from Google Play!**
 
-📥**Download Official Version:**  
+📥**دانلود نسخه رسمی:**  
 [![Termux 📲](https://img.shields.io/badge/Github-Termux📲-blue?style=plastic)](https://github.com/termux/termux-app/releases)
 
 * * *
@@ -46,7 +46,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/arshiacomplus/WarpScanner/ma
 ✔️**Get Wireguard Configuration**  
 ✔️**Creating a subconial link**  
 ✔️**Support v2ray and mahsang**  
-✔️**پشتیبانی از Sing-box و Hiddify**  
+✔️**Support Sing-Box and Hiddify**  
 ✔️**Save IPs in CSV file**  
 ✔️**Get Warp Configuration on Warp**
 
@@ -68,7 +68,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/arshiacomplus/WarpScanner/ma
 
 ### ⭐**Free support**
 
-✅**با دادن ستاره ⭐ و فالو 💙 از پروژه حمایت کنید!**  
+✅**Support the project by giving the star 2 and Falou!**  
 ✅**Introduce to your friends!**
 
 <p align="center">
