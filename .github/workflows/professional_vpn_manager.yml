@@ -1,0 +1,63 @@
+name: 🚀 Professional VPN System Manager
+
+on:
+  schedule:
+    # هر 6 ساعت یکبار سیستم را به‌روز می‌کند
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # اجازه اجرای دستی
+
+jobs:
+  # --- جاب اول: پیدا کردن IP تمیز ---
+  find-clean-ip:
+    runs-on: ubuntu-latest
+    outputs:
+      best_ip: ${{ steps.scan.outputs.ip }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Run IP Hunter (warpscanner-v4.1.0.py)
+        id: scan
+        run: |
+          wget https://raw.githubusercontent.com/arshiacomplus/WarpScanner/main/Linux/warpscanner-v4.1.0.py
+          chmod +x warpscanner-v4.1.0.py
+          python3 warpscanner-v4.1.0.py -o result.csv
+          BEST_IP=$(sed -n '2p' result.csv | cut -d ',' -f1)
+          if [ -z "$BEST_IP" ]; then exit 1; fi
+          echo "✅ Found best IP: $BEST_IP"
+          echo "ip=$BEST_IP" >> $GITHUB_OUTPUT
+
+  # --- جاب دوم: آپدیت کردن IP در ورکر ---
+  update-worker-ip:
+    runs-on: ubuntu-latest
+    needs: find-clean-ip
+    if: needs.find-clean-ip.outputs.best_ip != ''
+    steps:
+      - name: Update Cloudflare Worker Environment Variable
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: secret put CLEAN_IP --name ${{ secrets.CF_WORKER_NAME }}
+        env:
+          CLOUDFLARE_SECRET_TEXT: ${{ needs.find-clean-ip.outputs.best_ip }}
+
+  # --- جاب سوم: غیرفعال کردن کاربران منقضی (جلاد انقضا) ---
+  deactivate-expired-users:
+    runs-on: ubuntu-latest
+    needs: find-clean-ip # بعد از جاب اول اجرا می‌شود
+    if: always() # همیشه اجرا شود تا کاربران حتما غیرفعال شوند
+    steps:
+      - name: Install Wrangler CLI
+        run: npm install -g wrangler
+      - name: 💀 Deactivate Expired Users in D1
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        run: |
+          TIMESTAMP_NOW=$(date +%s)
+          echo "Deactivating users expired before $TIMESTAMP_NOW"
+          wrangler d1 execute ${{ secrets.CF_D1_DATABASE_ID }} --command "UPDATE users SET is_active = FALSE WHERE expiration_timestamp < $TIMESTAMP_NOW AND is_active = TRUE"
