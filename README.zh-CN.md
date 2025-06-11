@@ -13,7 +13,7 @@
 
 ## 📱Android版本（GUI）
 
-📥**[دانلود WarpScanner Android](https://github.com/arshiacomplus/WarpScanner-android-GUI/releases/)**
+📥**[下载Warpscanner Android](https://github.com/arshiacomplus/WarpScanner-android-GUI/releases/)**
 
 <p align="center">
   <img width="70%" src="https://github.com/mansor427/IpScanner/assets/104245967/08ccb46c-51a3-4d16-a0a4-27fb7492d35d">
@@ -23,7 +23,7 @@
 
 ## ⚠️重要的一点
 
-⛔**不要从Google Play下载血栓！**
+⛔**ترماکس را از گوگل پلی دانلود نکنید!**
 
 📥**下载官方版本：**  
 [![Termux 📲](https://img.shields.io/badge/Github-Termux📲-blue?style=plastic)](https://github.com/termux/termux-app/releases)
@@ -52,7 +52,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/arshiacomplus/WarpScanner/ma
 
 * * *
 
-### 📑**记录**
+### 📑**داکیومنت**
 
 <https://github.com/arshiacomplus/docs>
 
