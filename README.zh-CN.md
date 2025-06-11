@@ -1,4 +1,4 @@
-# 🚀翘曲扫描仪
+# 🚀 Warp Scanner
 
 🌎**语言：**  
 🇮🇷[波斯语](README.md)| 🇹🇷[土耳其](README.tr.md)| 🇬🇧[英语](README.en.md)| 🇨🇳[中国人](README.zh-CN.md)| 🇯🇵[日本人](README.ja.md)
@@ -52,7 +52,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/arshiacomplus/WarpScanner/ma
 
 * * *
 
-### 📑**داکیومنت**
+### 📑**记录**
 
 <https://github.com/arshiacomplus/docs>
 
