@@ -23,7 +23,7 @@
 
 ## ⚠️重要なポイント
 
-⛔**Google PlayからThromaxをダウンロードしないでください！**
+⛔**ترماکس را از گوگل پلی دانلود نکنید!**
 
 📥**公式バージョンをダウンロード：**  
 [![Termux 📲](https://img.shields.io/badge/Github-Termux📲-blue?style=plastic)](https://github.com/termux/termux-app/releases)
