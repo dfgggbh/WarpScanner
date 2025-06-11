@@ -1,6 +1,6 @@
 # 🚀 Çözgü Tarayıcısı
 
-🌎**Languages:**  
+🌎**Diller:**  
 🇮🇷[Farsça](README.md)| 🇹🇷[Türkçe](README.tr.md)| 🇬🇧[İngilizce](README.en.md)| 🇨🇳[Çince](README.zh-CN.md)| 🇯🇵[Japonca](README.ja.md)
 
 * * *
@@ -11,7 +11,7 @@
 
 * * *
 
-## 📱 نسخه اندرویدی (GUI)
+## 📱 Android sürümü (GUI)
 
 📥**[Warpscanner Android'i indirin](https://github.com/arshiacomplus/WarpScanner-android-GUI/releases/)**
 
@@ -23,7 +23,7 @@
 
 ## ⚠️ Önemli nokta
 
-⛔**ترماکس را از گوگل پلی دانلود نکنید!**
+⛔**Thromax'ı Google Play'den indirmeyin!**
 
 📥**Resmi Sürümü İndirin:**  
 [![Termux 📲](https://img.shields.io/badge/Github-Termux📲-blue?style=plastic)](https://github.com/termux/termux-app/releases)
@@ -44,15 +44,15 @@ bash <(curl -fsSL https://raw.githubusercontent.com/arshiacomplus/WarpScanner/ma
 
 ✔️**IP taraması (IPv4 ve IPv6)**  
 ✔️**WireGuard Yapılandırması Alın**  
-✔️**ایجاد لینک سابسکریپشن**  
-✔️**پشتیبانی از V2ray و MahsaNG**  
+✔️**Alt Monale Bağlantı Oluşturma**  
+✔️**Destek V2ray ve Mahsang**  
 ✔️**Sing-box'ı destekleyin ve Hiddify**  
 ✔️**IPS'yi CSV dosyasına kaydedin**  
 ✔️**Çözgüde çözgü yapılandırması alın**
 
 * * *
 
-### 📑**داکیومنت**
+### 📑**Belgesel**
 
 <https://github.com/arshiacomplus/docs>
 
@@ -68,7 +68,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/arshiacomplus/WarpScanner/ma
 
 ### ⭐**Ücretsiz Destek**
 
-✅**با دادن ستاره ⭐ و فالو 💙 از پروژه حمایت کنید!**  
+✅**Star 2 ve Falou'yu vererek projeyi destekleyin!**  
 ✅**Arkadaşlarınızla tanışın!**
 
 <p align="center">
