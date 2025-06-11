@@ -1,0 +1,42 @@
+name: CI
+
+on: [push, pull_request, release]
+
+jobs:
+  lint/security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with: python-version: '3.x'
+      - run: pip install flake8 black safety
+      - run: flake8 .
+      - run: black --check .
+      - run: safety check
+
+  build:
+    runs-on: ubuntu-latest
+    needs: lint/security
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with: python-version: '3.x'
+      - run: |
+          pip install .
+          python WarpScanner.py --version
+
+  release:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with: python-version: '3.x'
+      - name: Create zip
+        run: zip warpscanner.zip WarpScanner.py
+      - name: Upload asset
+        uses: softprops/action-gh-release@v1
+        with:
+          files: warpscanner.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
