@@ -1,0 +1,44 @@
+name: Advanced Security Scan with WarpScanner
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * *' # Daily scan
+
+jobs:
+  advanced-scan:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Run WarpScanner Advanced
+      uses: dfgggbh/WarpScanner@main
+      with:
+        target: ${{ secrets.SCAN_TARGET }}
+        scan-type: 'full' # [quick, standard, full]
+        output-format: 'sarif' # [json, markdown, sarif]
+        fail-on-critical: true
+        notify-slack: true
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
+    
+    - name: Upload SARIF results
+      uses: github/codeql-action/upload-sarif@v2
+      with:
+        sarif_file: results.sarif
+    
+    - name: Generate Security Dashboard
+      run: |
+        python generate_dashboard.py
+        mv security_report.html ./report/
+    
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: security-report
+        path: ./report/
