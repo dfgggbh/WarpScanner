@@ -1,4 +1,4 @@
-# 🚀 Warp Scanner
+# 🚀翘曲扫描仪
 
 🌎**语言：**  
 🇮🇷[波斯语](README.md)| 🇹🇷[土耳其](README.tr.md)| 🇬🇧[英语](README.en.md)| 🇨🇳[中国人](README.zh-CN.md)| 🇯🇵[日本人](README.ja.md)
@@ -23,7 +23,7 @@
 
 ## ⚠️重要的一点
 
-⛔**ترماکس را از گوگل پلی دانلود نکنید!**
+⛔**不要从Google Play下载血栓！**
 
 📥**下载官方版本：**  
 [![Termux 📲](https://img.shields.io/badge/Github-Termux📲-blue?style=plastic)](https://github.com/termux/termux-app/releases)
@@ -32,7 +32,7 @@
 
 ## 💻**安装和运行**
 
-下面的代码**tombox**跑步：
+下面的代码**tombox** اجرا کنید:  
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/arshiacomplus/WarpScanner/main/install.sh)
