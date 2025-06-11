@@ -25,7 +25,7 @@
 
 ⛔**Don't download the thromax from Google Play!**
 
-📥**دانلود نسخه رسمی:**  
+📥**Download Official Version:**  
 [![Termux 📲](https://img.shields.io/badge/Github-Termux📲-blue?style=plastic)](https://github.com/termux/termux-app/releases)
 
 * * *
